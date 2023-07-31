@@ -1,0 +1,16 @@
+assemble:
+    - include:
+          - "**/*.js"
+          - package.json
+liferay-sample-object-manager-oauth-application-user-agent:
+    .serviceAddress: localhost:5001
+    .serviceScheme: http
+    name: Liferay Sample Object Manager Node OAuth Application User Agent
+    scopes:
+        - Liferay.Headless.Admin.Workflow.everything
+    type: oAuthApplicationUserAgent
+liferay-sample-object-manager-etc-node:
+    name: Liferay Sample Node Object Manager
+    oAuth2ApplicationExternalReferenceCode: liferay-sample-object-manager-oauth-application-user-agent
+    resourcePath: /dynamic/object1
+    type: objectEntryManager
